@@ -4,7 +4,7 @@ defmodule Hayase.MixProject do
   def project do
     [
       app: :hayase,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -27,7 +27,7 @@ defmodule Hayase.MixProject do
     [
       maintainers: ["Alexey Terekhov"],
       licenses: ["MIT"],
-      links: %{github: "https://github.com/tap349/hayase"},
+      links: %{"GitHub" => "https://github.com/tap349/hayase"},
       # > <https://hex.pm/docs/publish>
       # >
       # > When running the command to publish a package, Hex will
