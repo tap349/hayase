@@ -21,7 +21,7 @@ functionality which seems to be enough for my needs.
 ## Examples
 
 using `Hayase.Types.Maybe` - before processing it's useful to wrap input value
-with `Hayase.Types.Maybe.wrap/1` so that `Maybe` value is built automatically:
+with `Hayase.Types.Maybe.wrap/1` to build `Maybe` value automatically:
 
 ```elixir
 use Hayase
