@@ -82,7 +82,7 @@ nil
 ```
 
 using `Hayase.Types.Result` - as a rule it's not necessary to wrap input value
-with `Hayase.Types.Result.wrap/1` since in most cases it's provided already as
+with `Hayase.Types.Result.wrap/1` since in most cases it's already provided as
 a `Result` value (that is tagged tuple):
 
 ```elixir
