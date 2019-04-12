@@ -149,4 +149,5 @@ be found at [https://hexdocs.pm/hayase](https://hexdocs.pm/hayase).
 ## TODO
 
 - tests
+- typespecs
 - docs
