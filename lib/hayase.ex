@@ -4,7 +4,7 @@ defmodule Hayase do
       import Hayase.Typeclasses.Functor
       import Hayase.Typeclasses.Monad
 
-      alias Hayase.Types.{Maybe, Monad}
+      alias Hayase.Types.{Maybe, Result}
     end
   end
 end

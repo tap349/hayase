@@ -48,20 +48,20 @@ nil
 
 "foo"
 |> Maybe.wrap()
-|> bind(fn x -> x <> Maybe.just(" bar") end)
-|> bind(fn x -> x <> Maybe.just(" baz") end)
+|> bind(fn x -> Maybe.just(x <> " bar") end)
+|> bind(fn x -> Maybe.just(x <> " baz") end)
 # => {:just, "foo bar baz"}
 
 "foo"
 |> Maybe.wrap()
-|> bind(fn x -> x <> Maybe.just(" bar") end)
-|> bind(fn x -> x <> Maybe.nothing(" baz") end)
+|> bind(fn x -> Maybe.just(x <> " bar") end)
+|> bind(fn x -> Maybe.nothing(x <> " baz") end)
 # => :nothing
 
 nil
 |> Maybe.wrap()
-|> bind(fn x -> x <> Maybe.just(" bar") end)
-|> bind(fn x -> x <> Maybe.just(" baz") end)
+|> bind(fn x -> Maybe.just(x <> " bar") end)
+|> bind(fn x -> Maybe.just(x <> " baz") end)
 # => :nothing
 
 # -----------------------------------------------
@@ -107,13 +107,13 @@ use Hayase
 # -----------------------------------------------
 
 {:ok, "foo"}
-|> bind(fn x -> x <> Result.ok(" bar") end)
-|> bind(fn x -> x <> Result.ok(" baz") end)
+|> bind(fn x -> Result.ok(x <> " bar") end)
+|> bind(fn x -> Result.ok(x <> " baz") end)
 # => {:ok, "foo bar baz"}
 
 {:ok, "foo"}
-|> bind(fn x -> x <> Result.error("error") end)
-|> bind(fn x -> x <> Result.ok(" baz") end)
+|> bind(fn x -> Result.error(x <> "error") end)
+|> bind(fn x -> Result.ok(x <> " baz") end)
 # => {:error, "error"}
 
 # -----------------------------------------------
