@@ -20,7 +20,7 @@ functionality which seems to be enough for my needs.
 
 ## Examples
 
-using `Hayase.Types.Maybe` - before processing it's useful to wrap input value
+Using `Hayase.Types.Maybe` - before processing it's useful to wrap input value
 with `Hayase.Types.Maybe.wrap/1` to build `Maybe` value automatically:
 
 ```elixir
@@ -81,7 +81,7 @@ nil
 # => "fallback value"
 ```
 
-using `Hayase.Types.Result` - as a rule it's not necessary to wrap input value
+Using `Hayase.Types.Result` - as a rule it's not necessary to wrap input value
 with `Hayase.Types.Result.wrap/1` since in most cases it's already provided as
 a `Result` value (so called tagged tuple):
 
