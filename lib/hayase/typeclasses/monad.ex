@@ -31,6 +31,9 @@ defimpl Hayase.Typeclasses.Monad, for: Tuple do
   def bind({:ok, v}, f) when is_function(f), do: f.(v)
   def bind({:error, _} = tuple, _), do: tuple
 
+  # ExTwilio.Message error
+  def bind({:error, _, _} = tuple, _), do: tuple
+
   # Ecto.Multi error
   def bind({:error, _, _, _} = tuple, _), do: tuple
 
@@ -54,6 +57,10 @@ defimpl Hayase.Typeclasses.Monad, for: Tuple do
   # -------------------------------------------------------
 
   def tap({:error, _} = tuple, _), do: tuple
+
+  # ExTwilio.Message error
+  def tap({:error, _, _} = tuple, _), do: tuple
+
   # Ecto.Multi error
   def tap({:error, _, _, _} = tuple, _), do: tuple
 

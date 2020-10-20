@@ -34,6 +34,9 @@ defimpl Hayase.Typeclasses.Functor, for: Tuple do
 
   def fmap({:error, _} = tuple, _), do: tuple
 
+  # ExTwilio.Message error
+  def fmap({:error, _, _} = tuple, _), do: tuple
+
   # Ecto.Multi error
   def fmap({:error, _, _, _} = tuple, _), do: tuple
 
