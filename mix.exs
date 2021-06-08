@@ -4,8 +4,8 @@ defmodule Hayase.MixProject do
   def project do
     [
       app: :hayase,
-      version: "0.1.3",
-      elixir: "~> 1.8",
+      version: "0.1.4",
+      elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       description: "Simple monads for Elixir",
